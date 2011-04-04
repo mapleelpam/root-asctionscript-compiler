@@ -1,0 +1,11 @@
+Root to Build action script compiler and pn-translater
+==========================================================
+
+## DESCRPTION
+
+## INITIALIZATION HOWTO
+    * first time
+        $ git submodule update --init
+    * update update source code
+        $ git submodule foreach git pull
+
