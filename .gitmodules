@@ -3,7 +3,7 @@
 	url = git@github.com:mapleelpam/programnode-transport-protocol.git
 [submodule "project/pn-translator"]
 	path = project/pn-translator
-	url = git@github.com:mapleelpam/programnode-transport-protocol.git
+	url = git@github.com:mapleelpam/programnode-translator.git
 [submodule "project/asc"]
 	path = project/asc
 	url = git@github.com:mapleelpam/adobe-asc-thrift.git

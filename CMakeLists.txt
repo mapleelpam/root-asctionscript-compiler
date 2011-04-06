@@ -14,6 +14,8 @@ make_directory( ${CMAKE_SOURCE_DIR}/lib/ )
 make_directory( ${CMAKE_SOURCE_DIR}/bin/ ) 
 
 FIND_PACKAGE(Thrift REQUIRED) 
+FIND_PACKAGE(Boost REQUIRED thread date_time program_options unit_test_framework filesystem regex system serialization)
+
 
 FILE( GLOB ASC_JAVA_SRC ${CMAKE_SOURCE_DIR}/project/asc/src/java/*/*/*.java )
 
@@ -22,7 +24,7 @@ FILE( GLOB ASC_JAVA_SRC ${CMAKE_SOURCE_DIR}/project/asc/src/java/*/*/*.java )
 ADD_CUSTOM_TARGET(asc.jar ALL echo
     OUTPUT ${CMAKE_SOURCE_DIR}/lib/asc.jar
     DEPENDS ${AST_THRIFT}  ${ASC_JAVA_SRC}
-    COMMAND ant -f ${CMAKE_SOURCE_DIR}/project/asc/build/java/build.xml -Dthrift.file=${AST_THRIFT}
+    COMMAND ant -f ${CMAKE_SOURCE_DIR}/project/asc/build/java/build.xml -Dthrift.file=${AST_THRIFT} -Dthrift.compiler=${THRIFT_COMPILER}
     COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/project/asc/lib/asc.jar ${CMAKE_SOURCE_DIR}/lib/
     COMMENT "updating asc.jar"
     )
