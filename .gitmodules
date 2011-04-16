@@ -7,3 +7,6 @@
 [submodule "project/asc"]
 	path = project/asc
 	url = git@github.com:mapleelpam/adobe-asc-thrift.git
+[submodule "project/complex-test"]
+	path = project/complex-test
+	url = git@github.com:mapleelpam/complex-pn-testcases.git

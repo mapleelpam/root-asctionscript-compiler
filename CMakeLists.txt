@@ -34,3 +34,9 @@ ADD_CUSTOM_TARGET(asc.jar ALL echo
 
 ADD_SUBDIRECTORY( ${CMAKE_SOURCE_DIR}/project/pn-translator/ )
 
+SET(ENABLE_COMPLEX_TEST FALSE CACHE BOOL "Enable complex test")
+if( ENABLE_COMPLEX_TEST )
+    ADD_SUBDIRECTORY( ${CMAKE_SOURCE_DIR}/project/complex-test)
+endif()
+
+
